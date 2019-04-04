@@ -1,0 +1,216 @@
+DROID INFO REPORT
+
+
+DEVICE
+Model: Redmi 4X (santoni)
+Manufacturer: Xiaomi
+Baseband Version: MPSS.TA.2.3.c1-00395-8953_GEN_PACK-1_V045
+RIL Version: Qualcomm RIL 1.0
+Build Number: N2G47H
+Build Fingerprint: Xiaomi/santoni/santoni:7.1.2/N2G47H/V10.1.1.0.NAMMIFI:user/release-keys
+Bootloader: unknown
+Java VM: ART 2.1.0
+OS Version: N MR1 (7.1.2)
+SDK: 25
+
+DISPLAY
+Resolution: HD, 720x1280 pixels
+Software Density: 320 dpi (xhdpi)
+Refresh Rate: 60 Hz
+
+PROCESSOR
+CPU Architecture: AArch64 Processor rev 4 (aarch64)
+Board: QC_Reference_Phone
+Chipset: Qualcomm Technologies, Inc MSM8940
+Cores: 8
+Clock Speed: 1401 MHz - 1401 MHz
+Instruction Sets: arm64-v8a
+CPU Features: fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU Governor: interactive
+Kernel Version: 3.18.31-perf-g6e5c25f
+Kernel Architecture: aarch64
+
+GRAPHICS
+Renderer: Adreno (TM) 505
+Vendor: Qualcomm
+OpenGL Version: OpenGL ES 3.2
+
+RAM
+Total: 2848 MB
+Java Heap: 192 MB
+
+STORAGE
+Internal: 24.1 GB
+EXTERNAL: Not Detected
+
+PRIMARY CAMERA
+Resolution: 13 MP
+Flash: Yes
+Video Resolution: 4K, 4096x2160
+Supported Resolutions: 
+    Image:
+    4160x3120
+    4160x2340
+    4000x3000
+    3840x2160
+    3264x2448
+    3200x2400
+    2976x2976
+    2592x1944
+    2592x1458
+    2688x1512
+    2048x1536
+    1920x1080
+    1600x1200
+    1440x1080
+    1280x960
+    1280x768
+    1280x720
+    1200x1200
+    1024x768
+    800x600
+    864x480
+    832x486
+    800x480
+    720x480
+    640x480
+    640x360
+    480x640
+    480x360
+    480x320
+    352x288
+    320x240
+    240x320
+    176x144
+    160x120
+    144x176
+
+    Video:
+    4096x2160 (4K)
+    3840x2160 (4K UHD)
+    1920x1080 (Full HD)
+    1280x960
+    1280x720 (HD)
+    864x480
+    800x480 (WVGA)
+    720x480
+    640x480 (VGA)
+    480x640 (VGA)
+    640x360
+    480x360
+    480x320
+    352x288
+    320x240
+    240x320
+    176x144
+    144x176
+    160x120
+
+SECONDARY CAMERA
+Resolution: 5 MP
+Video Resolution: Full HD, 1920x1080
+Supported Resolutions: 
+    Image:
+    2592x1944
+    2592x1458
+    2048x1536
+    1920x1080
+    1600x1200
+    1440x1080
+    1280x960
+    1280x768
+    1280x720
+    1200x1200
+    1024x768
+    800x600
+    864x480
+    832x486
+    800x480
+    720x480
+    640x480
+    640x360
+    480x640
+    480x360
+    480x320
+    352x288
+    320x240
+    240x320
+    176x144
+    160x120
+    144x176
+
+    Video:
+    1920x1080 (Full HD)
+    1280x960
+    1280x720 (HD)
+    864x480
+    800x480 (WVGA)
+    720x480
+    640x480 (VGA)
+    480x640 (VGA)
+    640x360
+    480x360
+    480x320
+    352x288
+    320x240
+    240x320
+    176x144
+    144x176
+    160x120
+
+FEATURES
+Bluetooth: Yes
+Bluetooth LE: Yes
+GPS: Yes
+NFC: No
+USB Accessory: Yes
+WiFi: Yes
+WiFi Direct: Yes
+
+BATTERY
+Technology: Li-poly
+Health: Good
+
+SENSORS
+BMI120 Accelerometer
+YAS537 Magnetometer
+YAS537 Magnetometer Uncalibrated
+BMI120 Gyroscope
+BMI120 Gyroscope Uncalibrated
+stk3x1x alsprx
+stk3x1x alsprx
+BMI120 Accelerometer -Wakeup Secondary
+YAS537 Magnetometer -Wakeup Secondary
+YAS537 Magnetometer Uncalibrated -Wakeup Secondary
+BMI120 Gyroscope -Wakeup Secondary
+BMI120 Gyroscope Uncalibrated -Wakeup Secondary
+stk3x1x alsprx -Non Wakeup Secondary
+stk3x1x alsprx -Wakeup Secondary
+Gravity
+Linear Acceleration
+Rotation Vector
+Step Detector
+Step Counter
+Significant Motion Detector
+Game Rotation Vector
+GeoMagnetic Rotation Vector
+Orientation
+Tilt Detector
+Gravity -Wakeup Secondary
+Linear Acceleration -Wakeup Secondary
+Rotation Vector -Wakeup Secondary
+Step Detector -Wakeup Secondary
+Step Counter -Wakeup Secondary
+Game Rotation Vector -Wakeup Secondary
+GeoMagnetic Rotation Vector -Wakeup Secondary
+Orientation -Wakeup Secondary
+AMD
+RMD
+Basic Gestures
+Facing
+Pedometer
+Motion Accel
+Coarse Motion Classifier
+
+
+Created by Droid Info
