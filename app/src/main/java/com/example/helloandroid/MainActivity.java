@@ -25,11 +25,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final TextView textView = (TextView) findViewById(R.id.outText);
-        final TextInputLayout textInput = (TextInputLayout) findViewById(R.id.URLInput);
-        final Button connectBtn = (Button)  findViewById(R.id.bringTextBtn);
-
-        Log.d("MainActivity", "Running Methods");
         changeText();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -44,15 +39,17 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    private void changeText(){
+
+    private int changeText(){
 
         final TextInputLayout textInput = (TextInputLayout) findViewById(R.id.URLInput);
         final Button connectBtn = (Button)  findViewById(R.id.bringTextBtn);
 
-        String textUrl= textInput.getEditText().getText().toString();
+
         connectBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                httpText(textInput.getEditText().getText().toString());
+                String textUrl= textInput.getEditText().getText().toString();
+                httpText(textUrl);
             }
         });
 
@@ -64,11 +61,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url =urlAddress;
 
         // Request a string response from the provided URL.
 
-                StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                StringRequest stringRequest = new StringRequest(Request.Method.GET, urlAddress,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
