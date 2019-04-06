@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    TextView urlText;
+    EditText urlText;
     EditText outputText;
 
     public void buttonClick(View view){
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        urlText = findViewById(R.id.urlTextView);
+        urlText = findViewById(R.id.urlText);
         outputText = findViewById(R.id.outputText);
     }
 }
