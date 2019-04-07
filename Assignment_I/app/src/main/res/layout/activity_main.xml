@@ -1,0 +1,32 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/search"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Connect" android:padding="25dp"/>
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/colorAccent"
+        android:padding="25dp"
+        android:imeOptions="actionSearch"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:inputType="textUri"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_margin="100dp"
+        android:layout_gravity="center"/>
+</LinearLayout>
