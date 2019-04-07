@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         //System.out.println(urlText.getText().toString());
         try {
             task.execute(urlText.getText().toString());
+            //task.execute("https://en.wikipedia.org/wiki/Bart_Simpson#/media/File:Bart_Simpson_200px.png");
         }
         catch (Exception e){
             Toast.makeText(this, "Oh no! Something went wrong. Kindly check URL (Check if http(s):// is added before www)", Toast.LENGTH_LONG).show();
