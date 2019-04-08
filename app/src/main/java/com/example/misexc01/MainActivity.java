@@ -3,6 +3,7 @@ package com.example.misexc01;
 //Jawad Ahmed
 //119150
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,11 +23,10 @@ public class MainActivity extends AppCompatActivity {
     EditText urlText;
     TextView outputText;
     String result;
-    //http://www.google.com
+    Boolean check = true;
 
     public void buttonClick(View view){
         downloadTask task = new downloadTask();
-        //System.out.println(urlText.getText().toString());
         try {
             task.execute(urlText.getText().toString());
             //task.execute("https://en.wikipedia.org/wiki/Bart_Simpson#/media/File:Bart_Simpson_200px.png");
@@ -34,19 +34,24 @@ public class MainActivity extends AppCompatActivity {
         catch (Exception e){
             Toast.makeText(this, "Oh no! Something went wrong. Kindly check URL (Check if http(s):// is added before www)", Toast.LENGTH_LONG).show();
         }
-        //task.execute("http://www.google.com");
-        //https://stackoverflow.com/questions/38865870/download-web-content-with-asynctask referred from here because of crashing App
-        //task.execute("https://www.ecowebhosting.co.uk");
-
     }
+
+    public void webView(View view){
+        if((outputText.getText().toString() == "")||(result == null)){
+            Toast.makeText(this, "Please connect to a website", Toast.LENGTH_SHORT).show();
+        }else{
+            Intent intent = new Intent(getApplicationContext(), ViewContent.class);
+            intent.putExtra("Content", result);
+            startActivity(intent);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         urlText = findViewById(R.id.urlText);
         outputText = findViewById(R.id.outputText);
-        /*https://www.viralandroid.com/2015/10/how-to-make-scrollable-textview-in-android.html
-        New method learned to make the TextView scrollable... Preferred to use TextView over Multiline EditText to stop the user from changing the output*/
         outputText.setMovementMethod(new ScrollingMovementMethod());
     }
     public class downloadTask extends AsyncTask<String, Void, String>{
@@ -65,29 +70,60 @@ public class MainActivity extends AppCompatActivity {
 
                 int data = reader.read();
 
-                while(data!=-1){
+               while(data!=-1){
                     char currentData = (char) data;
                     result+=currentData;
                     data = reader.read();
-                    //System.out.println("Reading");
+
                 }
-                //System.out.println(result);
+
             } catch (MalformedURLException e) {
-                Toast.makeText(MainActivity.this, "URL not properly formed, please check again!", Toast.LENGTH_LONG).show();
-               // e.printStackTrace();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        check=false;
+                        Toast.makeText(MainActivity.this, "URL not properly formed, please check again!", Toast.LENGTH_LONG).show();
+                    }
+                });
+                e.printStackTrace();
             } catch (IOException e) {
-                Toast.makeText(MainActivity.this, "Oops! Something went wrong, couldn't get connection. Are you sure website exists?", Toast.LENGTH_LONG).show();
-               // e.printStackTrace();
-            } catch (Exception e){
-                Toast.makeText(MainActivity.this, "Oops! Something went wrong.", Toast.LENGTH_SHORT).show();
-               // e.printStackTrace();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        check=false;
+                        Toast.makeText(MainActivity.this, "Oops! Something went wrong, couldn't get connection. Are you sure website exists?", Toast.LENGTH_LONG).show();
+                    }
+                });
+                e.printStackTrace();
             }
             return null;
         }
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+            if (check) Toast.makeText(MainActivity.this, "Task completed", Toast.LENGTH_SHORT).show();
+            check=true;
             outputText.setText(result);
+        }
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            if (check) Toast.makeText(MainActivity.this, "Loading content, please wait!", Toast.LENGTH_SHORT).show();
         }
     }
 }
+
+/*
+References:
+
+https://www.viralandroid.com/2015/10/how-to-make-scrollable-textview-in-android.html
+New method learned to make the TextView scrollable... Preferred to use TextView over Multiline EditText to stop the user from changing the output
+
+https://stackoverflow.com/questions/38865870/download-web-content-with-asynctask
+referred from here because of crashing App
+
+https://stackoverflow.com/questions/2837676/how-to-raise-a-toast-in-asynctask-i-am-prompted-to-used-the-looper
+Referred from here to make the Toasts run on UI thread while trying to execute them from the doInBackground
+
+
+ */
