@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.mis.helloandroid">
 
-    //https://developer.android.com/guide/topics/permissions/overview
+    <!-- https://developer.android.com/guide/topics/permissions/overview -->
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application

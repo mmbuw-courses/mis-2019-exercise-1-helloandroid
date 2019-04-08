@@ -1,28 +1,21 @@
 package org.mis.helloandroid;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
-
-import javax.net.ssl.HttpsURLConnection;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     public void onSendClick(View view){
         //Get text
         //https://stackoverflow.com/questions/7200108/android-gettext-from-edittext-field
-        TextInputEditText urlInput = (TextInputEditText)findViewById(R.id.tiet);
+        TextInputEditText urlInput = findViewById(R.id.tiet);
         String urlText = urlInput.getText().toString();
 
         //Check if text was submitted
@@ -60,10 +53,31 @@ public class MainActivity extends AppCompatActivity {
         //Convert text to URL
         try{
             URL urlURL = new URL(urlText);
-            //TODO: Send GET request
+
+            //Send GET request
             Toast.makeText(getApplicationContext(), "Sending HTTP request.", Toast.LENGTH_SHORT).show();
 
-            //TODO: Parse/display response
+            //https://developer.android.com/training/volley/simple.html
+            RequestQueue requestQueue = Volley.newRequestQueue(this);
+            StringRequest requestString = new StringRequest(Request.Method.GET, urlURL.toString(),
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+
+                            Toast.makeText(getApplicationContext(), "Success.", Toast.LENGTH_SHORT).show();
+                            //TODO: Parse/display response
+                            
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError f) {
+
+                            //TODO: Distinguish between different errors
+                            Toast.makeText(getApplicationContext(), "Error: " + f.toString(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+            requestQueue.add(requestString);
 
         }
         catch (MalformedURLException e){
