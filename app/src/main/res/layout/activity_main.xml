@@ -16,18 +16,29 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/app_name"/>
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/tiet"
+        android:layout_width="wrap_content"
+        android:width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_margin="@dimen/tiet_margin"
+        android:hint="@string/tiet_hint"
+        android:inputType="textUri" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="center_vertical|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:onClick="onSendClick"
+        app:srcCompat="@android:drawable/ic_menu_send"
+        />
 
 </android.support.design.widget.CoordinatorLayout>
