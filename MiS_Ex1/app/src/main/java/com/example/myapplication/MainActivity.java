@@ -2,7 +2,7 @@ package com.example.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
@@ -20,22 +20,26 @@ import com.android.volley.toolbox.Volley;
 public class MainActivity extends AppCompatActivity {
 StringRequest strRequest;
 RequestQueue queue;
-String url;
-Button btnRequest;
 private WebView webView;
+private TextView textView;
 private EditText textInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnRequest = (Button)findViewById(R.id.buttonRequest);
-        webView = (WebView)findViewById(R.id.textView);
+        Button btnRequest = (Button) findViewById(R.id.buttonRequest);
+        webView = (WebView)findViewById(R.id.webView);
+        textView = (TextView)findViewById(R.id.textView);
+        textView.setMovementMethod(new ScrollingMovementMethod());
         textInput = (EditText)findViewById(R.id.textInput);
 
+        //Basic layout for request/respoonse structure from https://abhiandroid.com/programming/volley
         btnRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 sendAndRequestResponse();
             }
         }
@@ -44,16 +48,14 @@ private EditText textInput;
 
     private void sendAndRequestResponse() {
 
-        //RequestQueue initialized
         queue = Volley.newRequestQueue(this);
-        //String Request initialized
-        url = textInput.getText().toString();
-        //url = "https://www.uni-weimar.de";
+        String url = textInput.getText().toString();
         strRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 webView.loadData(response.toString(),"text/html; charset=utf-8", "utf-8");
-            }
+                textView.setText(response.toString());
+                          }
         },
         new Response.ErrorListener() {
             @Override
