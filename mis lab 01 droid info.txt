@@ -1,0 +1,80 @@
+DROID INFO BERICHT
+GERÄT
+Modell: SM-G920F (zerofltexx)
+Hersteller: samsung
+Abmessungen: 143.4 x 70.5 x 6.8 mm
+Gewicht: 138 g
+Baseband-Version: G920FXXU6ERF6
+RIL-Version: Samsung RIL v3.0
+Build-Nummer: NRD90M.G920FXXU6ERF5
+Build-Fingerprint: samsung/zerofltexx/zeroflte:7.0/NRD90M/G920FXXU6ERF5:user/release-keys 
+Bootloader: G920FXXU6ERF5
+Java VM: ART 2.1.0
+OS-Version: Nougat (7.0)
+SDK: 24 DISPLAY
+Größe: 5.1 inches
+Auflösung: WQHD, 1440x2560 pixels
+Pixeldichte: 577 ppi
+Softwaredichte: 640 dpi (xxxhdpi)
+Erneuerungsrate: 59 Hz PROZESSOR
+CPU-Architektur: AArch64 Processor rev 0 (aarch64)
+Board: universal7420
+Chipsatz: SAMSUNG Exynos7420
+Kerne: 8 Taktungsgeschwindigkeit: 400 MHz - 2100 MHz
+Anleitungssets: arm64-v8a
+CPU-Features: fp asimd aes pmull sha1 sha2 crc32
+CPU-Regulator: interactive
+Kernel-Version: 3.10.61-13830439
+Kernel-Architektur: aarch64
+
+GRAFIKEN
+Renderer: Mali-T760
+Verkäufer: ARM
+OpenGL-Version: OpenGL ES 3.2
+RAM Gesamt: 2682 MB
+Java Heap: 256 MB
+
+SPEICHER
+Intern: 25,4 GB
+
+EXTERN:
+Nicht erkannt
+
+FEATURES
+Bluetooth: Ja
+Bluetooth LE: Ja
+GPS: Ja NFC: Ja
+USB Zubehörteil: Ja
+WiFi: Ja
+WiFi Direct: Ja
+
+AKKU
+Technologie: Li-ion
+Gesundheit: Gut
+
+SENSOREN
+MPU6500 Acceleration Sensor
+YAS537 Magnetic Sensor
+MPU6500 Gyroscope Sensor 
+LPS25H Barometer Sensor
+TMD49XX Proximity Sensor
+TMD49XX RGB Sensor
+YAS537 Uncalibrated Magnetic Sensor
+SAMSUNG Step Detector Sensor
+SAMSUNG Significant Motion Sensor
+MPU6500 Gyroscope sensor UnCalibrated
+MPL Game Rotation Vector
+MPL Rotation Vector
+SAMSUNG Step Counter Sensor
+Grip Sensor
+TMD49XX RGB IR Sensor
+Interrupt Gyroscope Sensor
+SAMSUNG Tilt Detector
+SAMSUNG Pick Up Gesture
+Screen Orientation Sensor
+Motion Sensor
+Gravity Sensor
+Linear Acceleration Sensor
+Orientation Sensor
+
+Erstellt von Droid Info
