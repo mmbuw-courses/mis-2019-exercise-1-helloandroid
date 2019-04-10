@@ -9,6 +9,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ViewContent"></activity>
@@ -22,3 +23,4 @@
     </application>
 
 </manifest>
+    <!-- https://stackoverflow.com/questions/55581507/webview-app-on-android-not-able-to-access-internet-while-emulator-works-fine?noredirect=1-->
