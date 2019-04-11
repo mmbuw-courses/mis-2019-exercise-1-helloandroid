@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HelloAndroid</string>
+    <string name="action_settings">Settings</string>
+    <string name="error_network_timeout">Network Timeout</string>
+    <string name="server_error">Server Error</string>
+    <string name="uri_error">Please check if URI is correct with protocol.</string>
+</resources>

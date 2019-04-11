@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:id="@+id/URLText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/URLLabelText"
+
+        />
+
+    <Button
+        android:id="@+id/connectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/URLText"
+        android:text="Connect"
+        />
+
+    <TextView
+        android:id="@+id/URLLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the URL below. http://{URL}" />
+
+
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text="Result"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/URLWebView"
+        />
+
+    <WebView
+        android:id="@+id/URLWebView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/connectBtn"
+        android:visibility="visible"/>
+
+</RelativeLayout>
