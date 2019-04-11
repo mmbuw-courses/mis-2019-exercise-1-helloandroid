@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">hello-android</string>
+    <string name="enter_url">Enter URL</string>
+    <string name="connect_url">Connect</string>
+    <string name="show_url_text">Show the text displayed on the URL</string>
+    <string name="show_website">Show searched Website</string>
+</resources>
