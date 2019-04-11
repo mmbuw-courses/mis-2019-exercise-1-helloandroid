@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_main" />
+
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/layoutInput"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/urlText"
+                android:layout_width="300dip"
+                android:layout_height="100dip"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="#9cc"
+                android:hint="Enter Url here"
+                android:inputType="textUri"
+                android:textSize="@dimen/buttonTextsize" />
+
+            <Button
+                android:id="@+id/connect"
+                android:layout_width="200dip"
+                android:layout_height="80dip"
+                android:layout_below="@id/urlText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dip"
+                android:background="@color/colorAccent"
+                android:text="@string/connect"
+                android:textSize="@dimen/buttonTextsize" />
+        </RelativeLayout>
+
+         <ScrollView
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_weight="1"
+             android:fillViewport="true">
+            <RelativeLayout
+                android:id="@+id/layoutOutput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/outputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="700dip"
+                    android:background="#acc"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:hint="The Output will be printed out here"
+                    android:scrollbars="vertical"
+                    android:textSize="@dimen/outputTextsize" />
+
+                <WebView
+                    android:id="@+id/outputHTML"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_below="@id/outputText"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+         </ScrollView>
+
+     </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
