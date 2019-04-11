@@ -1,5 +1,3 @@
-//https://stackoverflow.com/questions/4044509/android-how-to-use-the-html-taghandler
-
 package com.example.helloandroid;
 import android.text.Editable;
 import android.text.Html;
@@ -9,6 +7,7 @@ import android.text.style.StrikethroughSpan;
 
 import org.xml.sax.XMLReader;
 
+//https://stackoverflow.com/questions/4044509/android-how-to-use-the-html-taghandler
 public class MyHtmlTagHandler implements Html.TagHandler {
 
     public void handleTag(boolean opening, String tag, Editable output,
