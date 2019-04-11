@@ -64,19 +64,6 @@ public class MainActivity extends AppCompatActivity {
         setup.setUseWideViewPort(true);
         setup.setLoadWithOverviewMode(true);
 
-        web_view.setWebViewClient(new WebViewClient(){
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url){
-                view.loadUrl(url);
-                return true;
-            }
-
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-            }
-        });
-
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,6 +83,19 @@ public class MainActivity extends AppCompatActivity {
                     web_view.requestFocus();
 
                 }
+            }
+        });
+
+        web_view.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url){
+                view.loadUrl(url);
+                return true;
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
             }
         });
 
