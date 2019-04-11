@@ -1,4 +1,3 @@
 # mis-2019-exercise-1-helloandroid
-Lucas Nachname,  
+Lucas Hübner, 116232  
 Hans Lienhop, 114926  
-  
