@@ -73,22 +73,20 @@
                     android:id="@+id/outputText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxHeight="700dip"
                     android:background="#acc"
                     android:layout_margin="@dimen/fab_margin"
                     android:hint="The Output will be printed out here"
                     android:scrollbars="vertical"
                     android:textSize="@dimen/outputTextsize" />
 
-                <TextView
+                <WebView
                     android:id="@+id/outputHTML"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="500dp"
                     android:layout_below="@id/outputText"
                     android:layout_margin="@dimen/fab_margin"
-                    android:background="#acc"
-                    android:hint="The Output HTML will be printed out here"
-                    android:scrollbars="vertical"
-                    android:textSize="@dimen/outputTextsize" />
+                    android:layout_centerHorizontal="true" />
             </RelativeLayout>
 
          </ScrollView>
