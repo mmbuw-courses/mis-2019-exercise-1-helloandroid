@@ -80,16 +80,16 @@ public class MainActivity extends AppCompatActivity {
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InputMethodManager imm =
+                InputMethodManager input_manage =
                         (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(input_text.getWindowToken(), 0);
+                input_manage.hideSoftInputFromWindow(input_text.getWindowToken(), 0);
 
                 url_str = input_text.getText().toString();
                 if(url_str.length() == 0){
-                    showToast("Please input an URL here");
+                    toast_mes("Please input an URL here");
                 }else {
                     web_view.loadUrl("about:blank");
-                    if (!url_str.startsWith("http://") && !url_str.startsWith("https://")) { //from add_http
+                    if (!url_str.toLowerCase().startsWith("http://") && !url_str.toLowerCase().startsWith("https://")) { //from add_http
                         url_str = "https://" + url_str;
                     }
                     web_view.loadUrl(url_str);
@@ -104,14 +104,9 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
-    private void loadWebView() {
-        web_view.loadUrl(url_str); //from display_url
-        web_view.requestFocus();
-    }
-
-    private void showToast(String msg) {
-        Toast toast = Toast.makeText(this, msg, Toast.LENGTH_LONG);
-        toast.show();
+    private void toast_mes(String msg) {
+        Toast text_mes = Toast.makeText(this, msg, Toast.LENGTH_LONG);
+        text_mes.show();
     }
 
 }

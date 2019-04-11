@@ -33,7 +33,7 @@
     <WebView
         android:id="@+id/web_view"
         android:layout_width="395dp"
-        android:layout_height="250dp"
+        android:layout_height="342dp"
         android:layout_marginBottom="104dp"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         tools:layout_editor_absoluteX="8dp">
