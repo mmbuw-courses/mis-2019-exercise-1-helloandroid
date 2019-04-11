@@ -1,0 +1,174 @@
+DROID INFO REPORT
+
+
+DEVICE
+Model: SM-N950F (greatltexx)
+Manufacturer: samsung
+Baseband Version: N950FXXU5DSB1
+RIL Version: Samsung RIL v4.0
+Build Number: PPR1.180610.011.N950FXXS5DSB4
+Build Fingerprint: samsung/greatltexx/greatlte:9/PPR1.180610.011/N950FXXS5DSB4:user/release-keys
+Bootloader: N950FXXS5DSB4
+Java VM: ART 2.1.0
+OS Version: P (9)
+SDK: 28
+
+DISPLAY
+Resolution: 1080x2220 pixels
+Software Density: 420 dpi
+Refresh Rate: 60 Hz
+
+PROCESSOR
+CPU Architecture: ARMv8-A
+Board: universal8895
+Chipset: SAMSUNGEXYNOS8895
+Cores: 8
+Clock Speed: 455 MHz - 2314 MHz
+Instruction Sets: arm64-v8a
+CPU Features: fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU Governor: interactive
+Kernel Version: 4.4.111-15325116
+Kernel Architecture: aarch64
+
+GRAPHICS
+Renderer: Mali-G71
+Vendor: ARM
+OpenGL Version: OpenGL ES 3.2
+
+RAM
+Total: 5339 MB
+Java Heap: 256 MB
+
+STORAGE
+Internal: 53.1 GB
+EXTERNAL: Not Detected
+
+PRIMARY CAMERA
+Resolution: 12.2 MP
+Flash: Yes
+Video Resolution: Full HD, 1920x1080
+Supported Resolutions: 
+    Image:
+    4032x3024
+    4032x2268
+    3024x3024
+    3984x2988
+    3264x2448
+    3264x1836
+    4032x1960
+    2976x2976
+    2880x2160
+    2560x1440
+    2160x2160
+    2048x1152
+    1920x1080
+    1280x720
+    960x720
+    640x480
+
+    Video:
+    1920x1080 (Full HD)
+    1440x1440
+    1440x1080
+    1088x1088
+    1280x720 (HD)
+    960x720
+    800x450
+    720x480
+    640x480 (VGA)
+    480x320
+    352x288
+    320x240
+    256x144
+    176x144
+
+SECONDARY CAMERA
+Resolution: 8 MP
+Video Resolution: Full HD, 1920x1080
+Supported Resolutions: 
+    Image:
+    3264x2448
+    3264x1836
+    3264x1592
+    2560x1440
+    2448x2448
+    2048x1536
+    1920x1440
+    1920x1080
+    1440x1440
+    1280x720
+    960x720
+    640x480
+    352x288
+    320x240
+    256x144
+
+    Video:
+    1920x1080 (Full HD)
+    1440x1440
+    1440x1080
+    1088x1088
+    1280x720 (HD)
+    960x720
+    800x450
+    720x480
+    640x480 (VGA)
+    480x320
+    352x288
+    320x240
+    256x144
+    176x144
+
+FEATURES
+Bluetooth: Yes
+Bluetooth LE: Yes
+GPS: Yes
+NFC: Yes
+USB Accessory: Yes
+WiFi: Yes
+WiFi Direct: Yes
+
+BATTERY
+Technology: Li-ion
+Health: Good
+
+SENSORS
+LSM6DSL Acceleration Sensor
+LSM6DSL Gyroscope Sensor
+LSM6DSL Acceleration Sensor UnCalibrated
+LSM6DSL Gyroscope sensor UnCalibrated
+Interrupt Gyroscope Sensor
+AK09916C Magnetic field Sensor
+AK09916C Magnetic Sensor UnCalibrated
+LPS22H Barometer Sensor
+TMD4906 Proximity Sensor
+TMD4906 lux Sensor
+TMD4906 RGB IR Sensor
+TMD4906 RGB Sensor
+Proximity Alert Sensor
+Light Flicker Sensor
+SAMSUNG Step Detector Sensor
+SAMSUNG Step Counter Sensor
+SAMSUNG Significant Motion Sensor
+Samsung Rotation Vector
+Samsung Game Rotation Vector
+SAMSUNG Tilt Detector
+SAMSUNG Pick Up Gesture
+SContext
+SAMSUNG Wake Up Motion
+Rear Ambient Light
+Rear Proximity detecting
+HRMLED IR
+HRMLED RED
+MAX86907
+SX9320 Grip Sensor
+Screen Orientation Sensor
+HRM Sensor
+HeartRate Sensor
+Motion Sensor
+Gravity Sensor
+Linear Acceleration Sensor
+Orientation Sensor
+
+
+Created by Droid Info
