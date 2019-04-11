@@ -20,14 +20,33 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_main" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+    <RelativeLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/urlText"
+            android:layout_width="300dip"
+            android:layout_height="100dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#9cc"
+            />
 
+        <Button
+            android:id="@+id/connect"
+            android:layout_width="200dip"
+            android:layout_height="100dip"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorAccent"
+            android:text="@string/connect"
+            android:layout_marginTop="20dip"
+            android:textSize="@dimen/buttonTextsize"
+            android:layout_below="@id/urlText"
+            />
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
