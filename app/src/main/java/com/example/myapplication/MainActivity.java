@@ -1,14 +1,14 @@
 package com.example.myapplication;
 
-import android.app.DownloadManager;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -38,12 +38,21 @@ public class MainActivity extends AppCompatActivity {
         urlField = findViewById(R.id.urlField);
         connectBtn = findViewById(R.id.connectbtn);
         textView = findViewById(R.id.textView);
+        webView = findViewById(R.id.webView);
 
-        //check network
-        if (checkInternet()) {
-            this.toastNoti("No network connection");
-        }
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                super.onReceivedError(view, errorCode, description, failingUrl);
+                toastNoti("Error content:" + Integer.toString(errorCode) + description);
+            }
 
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                webView.loadUrl(url);
+                return true;
+            }
+        });
 
     }
 
@@ -72,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
         });
         //Add request to Request Queue
         queue.add(stringRequest);
+
+        //create a blank page
+        webView.loadUrl(url);
     }
     // Toast
     private void  toastNoti(String content) {
@@ -80,17 +92,6 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
     }
 
-    // Check internet
-    private boolean checkInternet() {
-        ConnectivityManager connectMng = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo;
-        if(connectMng != null) {
-            networkInfo = connectMng.getActiveNetworkInfo();
-        }else  {
-            networkInfo = null;
-        }
-        return  networkInfo != null && networkInfo.isConnected();
-    }
 
     // Display website on webview
     private void webViewDisplay() {
