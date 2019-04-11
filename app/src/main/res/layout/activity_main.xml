@@ -33,11 +33,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/pictureDownload"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/outputText"
+        app:layout_constraintStart_toStartOf="@+id/outputText"
+        app:layout_constraintTop_toBottomOf="@+id/webButton" />
+
     <TextView
         android:id="@+id/outputText"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
+        android:alpha="0"
         android:hint="The output will be displayed here"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,6 +65,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:alpha="1"
         android:onClick="webView"
         android:text="Display Website"
         app:layout_constraintBottom_toTopOf="@+id/outputText"
@@ -61,4 +74,5 @@
         app:layout_constraintStart_toEndOf="@+id/webButton"
         app:layout_constraintTop_toBottomOf="@+id/urlText"
         app:layout_constraintVertical_bias="0.0" />
+
 </android.support.constraint.ConstraintLayout>
