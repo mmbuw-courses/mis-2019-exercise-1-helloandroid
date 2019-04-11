@@ -92,6 +92,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String getPrettyErrorText(VolleyError error) {
-        return "Oooops, something went wrong. Error: " + error.getMessage();
+        String message = "Oooops, something went wrong. \nError: " + error.getClass().toString();
+
+        if (error.getMessage() != null && error.getMessage().length() > 0) {
+            message = message + "\nError message: " + error.getMessage();
+        }
+
+        return message;
     }
 }
