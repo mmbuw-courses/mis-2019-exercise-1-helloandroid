@@ -1,13 +1,19 @@
 package com.awesometek.mis1;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.URLUtil;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.text.method.ScrollingMovementMethod;
+import android.widget.Toast;
+import com.android.volley.*;
+import com.android.volley.toolbox.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,19 +24,51 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        final EditText urlText = findViewById(R.id.urlText);
+        urlText.setText("https://awesometek.com");
+        final TextView outputText = findViewById(R.id.outputText);
+        outputText.setMovementMethod(new ScrollingMovementMethod());
+        final Button connectButton = findViewById(R.id.connect);
+        connectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                String url = urlText.getText().toString();
+                RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+                if(url.matches("")) {
+                    Toast.makeText(getApplicationContext(), "No URL given!",
+                            Toast.LENGTH_LONG).show();
+                } else if(!URLUtil.isValidUrl(url)) {
+                    Toast.makeText(getApplicationContext(), "Invalid URL!",
+                            Toast.LENGTH_LONG).show();
+                } else {
+                    StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                // Display the first 500 characters of the response string.
+                                outputText.setText("Response is: " + response.substring(0, 500));
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Toast.makeText(getApplicationContext(), "ERROR: " + error.getMessage(), Toast.LENGTH_LONG).show();
+                            }
+                    });
+                    requestQueue.add(stringRequest);
+                }
             }
         });
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+        Toast.makeText(getApplicationContext(), "Bye!", Toast.LENGTH_LONG).show();
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
