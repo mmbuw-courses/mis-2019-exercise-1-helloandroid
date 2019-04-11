@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         //Add request to Request Queue
         queue.add(stringRequest);
 
-        //create a blank page
+        //display webview
         webView.loadUrl(url);
     }
     // Toast
@@ -92,10 +92,5 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
     }
 
-
-    // Display website on webview
-    private void webViewDisplay() {
-
-    }
 }
 
