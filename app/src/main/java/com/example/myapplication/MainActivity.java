@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -26,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     EditText urlField;
     Button connectBtn;
     TextView textView;
-    int x = 0;
+    WebView webView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.textView);
 
         //check network
-        if (checkPermissionInternet()) {
+        if (checkInternet()) {
             this.toastNoti("No network connection");
         }
 
@@ -55,12 +57,11 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(this);
 
 
-
         //Request a string response from the provided URL
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                // print result on text view
+            // print result on text view
                 textView.setText(response);
             }
         }, new Response.ErrorListener() {
@@ -73,22 +74,27 @@ public class MainActivity extends AppCompatActivity {
         queue.add(stringRequest);
     }
     // Toast
-    protected void  toastNoti(String content) {
+    private void  toastNoti(String content) {
         Toast toast = Toast.makeText(MainActivity.this, content, Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER,0,0);
         toast.show();
     }
 
-    // Check permission
-    protected boolean checkPermissionInternet() {
-        ConnectivityManager contectMng = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+    // Check internet
+    private boolean checkInternet() {
+        ConnectivityManager connectMng = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo;
-        if(contectMng != null) {
-            networkInfo = contectMng.getActiveNetworkInfo();
+        if(connectMng != null) {
+            networkInfo = connectMng.getActiveNetworkInfo();
         }else  {
             networkInfo = null;
         }
         return  networkInfo != null && networkInfo.isConnected();
+    }
+
+    // Display website on webview
+    private void webViewDisplay() {
+
     }
 }
 
