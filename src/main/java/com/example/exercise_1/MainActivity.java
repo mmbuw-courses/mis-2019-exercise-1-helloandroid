@@ -86,14 +86,14 @@ public class MainActivity extends AppCompatActivity {
     //https://www.youtube.com/watch?v=iwyK9S9yMgs&t=520s
 
     protected boolean InternetpermissionCheck() {
-        ConnectivityManager contectMng = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo;
+        ConnectivityManager Con_nnectt_Mnager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo infornetWokr;
         if(contectMng != null) {
-            networkInfo = contectMng.getActiveNetworkInfo();
+            infornetWokr = Con_nnectt_Mnager.getActiveNetworkInfo();
         }else  {
-            networkInfo = null;
+            infornetWokr = null;
         }
-        return  networkInfo != null && networkInfo.isConnected();
+        return  infornetWokr != null && infornetWokr.isConnected();
     }
 
 
