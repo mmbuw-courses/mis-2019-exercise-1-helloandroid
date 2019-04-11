@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         // Start the queue
         requestQueue.start();
 
+        // extract the url from the editText field
         uInput = (EditText) findViewById(R.id.editText);
         final String url = uInput.getText().toString();
 
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                         CharSequence text = error.getMessage();
                         int duration = Toast.LENGTH_LONG;
 
-                        //toast.setGravity(Gravity.TOP, 0,0);
+                        // use toast to handle exceptions.
                         toast.makeText(context, text, duration).show();
                     }
                 });
