@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onResponse(String response) {
 
-                                resultText.setText(response.substring(0,1000));
+                                resultText.setText(response.substring(0,2000));
                                 webView.loadUrl(URL);
                             }
                         }, new Response.ErrorListener() {

@@ -38,14 +38,14 @@
         android:layout_height="150dp"
         android:text="Result"
         android:scrollbars="vertical"
-        android:layout_below="@+id/URLWebView"
+        android:layout_below="@+id/connectBtn"
         />
 
     <WebView
         android:id="@+id/URLWebView"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_below="@+id/connectBtn"
+        android:layout_below="@+id/resultText"
         android:visibility="visible"/>
 
 </RelativeLayout>
