@@ -1,10 +1,10 @@
-toast and string.xml refernce: https://www.youtube.com/watch?v=mAJeK283j0I
+toast and string.xml reference: https://www.youtube.com/watch?v=mAJeK283j0I
 
-giving reference for elements: https://stackoverflow.com/questions/4531396/get-value-of-a-edit-text-field
+giving a reference for elements: https://stackoverflow.com/questions/4531396/get-value-of-a-edit-text-field
 
 Jsoup to textview: https://www.youtube.com/watch?v=x-VmYZGPnWc
 
-scrollable textview :https://stackoverflow.com/questions/1748977/making-textview-scrollable-on-android
+scrollable textview: https://stackoverflow.com/questions/1748977/making-textview-scrollable-on-android
 
 Images in imageview via picasso: https://www.youtube.com/watch?v=yl4FLNJ96vw
 picasso: https://github.com/square/picasso
