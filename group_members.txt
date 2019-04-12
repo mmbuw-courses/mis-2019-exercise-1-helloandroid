@@ -1,0 +1,100 @@
+Group members:
+
+- Arika Dodani
+- Fauziah Permatasari
+
+
+
+Exercise 0:
+
+Name: Nexus_5_API_27
+
+CPU/ABI: Google Play Intel Atom (x86)
+
+Path: /Users/fauziahpermatasari/.android/avd/Nexus_5_API_27.avd
+
+Target: google_apis_playstore [Google Play] (API level 27)
+
+Skin: nexus_5
+
+SD Card: 100M
+
+hw.dPad: no
+
+hw.lcd.height: 1920
+
+runtime.network.speed: full
+
+hw.accelerometer: yes
+
+hw.device.name: Nexus 5
+
+vm.heapSize: 128
+
+skin.dynamic: yes
+
+hw.device.manufacturer: Google
+
+hw.lcd.width: 1080
+
+hw.gps: yes
+
+hw.initialOrientation: Portrait
+
+image.androidVersion.api: 27
+
+hw.audioInput: yes
+
+image.sysdir.1: system-images/android-27/google_apis_playstore/x86/
+
+tag.id: google_apis_playstore
+
+showDeviceFrame: yes
+
+hw.camera.back: virtualscene
+
+hw.mainKeys: no
+
+AvdId: Nexus_5_API_27
+
+hw.camera.front: emulated
+
+hw.lcd.density: 480
+
+avd.ini.displayname: Nexus 5 API 27
+
+hw.arc: false
+
+hw.gpu.mode: auto
+
+hw.device.hash2: MD5:8559425ef53165ae4219cebb3e86e052
+
+hw.ramSize: 1536
+
+hw.trackBall: no
+
+PlayStore.enabled: true
+
+fastboot.forceColdBoot: no
+
+hw.battery: yes
+
+hw.cpu.ncore: 2
+
+hw.sdCard: no
+
+tag.display: Google Play
+
+runtime.network.latency: none
+
+hw.keyboard: yes
+
+hw.sensors.proximity: yes
+
+disk.dataPartition.size: 2G
+
+hw.sensors.orientation: yes
+
+avd.ini.encoding: UTF-8
+
+hw.gpu.enabled: yes
