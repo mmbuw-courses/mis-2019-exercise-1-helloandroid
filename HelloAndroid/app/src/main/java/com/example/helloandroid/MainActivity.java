@@ -11,7 +11,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
+// https://developer.android.com/training/volley/simple.html#manifest
 public class MainActivity extends AppCompatActivity {
  public TextView txtView;
     @Override
