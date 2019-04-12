@@ -129,12 +129,12 @@ public class MainActivity extends AppCompatActivity {
             try {
                 /*Learned scraping webpages via JSoup form:
                     https://www.youtube.com/watch?v=x-VmYZGPnWc */
-                Document doc = Jsoup.connect(URL).get();
-                text = doc.text();
-                Elements img = doc.getElementsByTag("img");
+                Document doc = Jsoup.connect(URL).get();        //Jsoup crawls the webpage for data
+                text = doc.text(); //text is taken from the webpage and picked from the document
+                Elements img = doc.getElementsByTag("img"); //elements on the webpage with the tag img are picked from the document
                 for(Element i : img){
                     image = i.absUrl("src");
-                    list.add(image);
+                    list.add(image);        //the images are added to an arraylist
                 }
                 Log.d("images links", list.toString());
             }catch(Exception e){e.printStackTrace();}
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
             for(int i=0;i<list.size();i++)
             {
                 if(list.get(i).toString()==""){
-                    i++;
+                    i++;        //some websites gave some of the values saved in the arraylist as null, to counter that we check
                 }
                 else {
                     /*add imageview dynamically. (this was my last choice as I had spent too much time trying to get recycler view adapter class to work):
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                         https://github.com/square/picasso
                         https://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library
                      */
-                    Picasso.get().load(list.get(i).toString()).into(img);
+                    Picasso.get().load(list.get(i).toString()).into(img); //picasso puts the image into the imageViewer
                 }
             }
 
