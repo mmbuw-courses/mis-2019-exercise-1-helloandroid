@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Exercise 01</string>
+    <string name="URL">Please enter a URL here.</string>
+    <string name="GO">CONNECT</string>
+    <string name="error_network_timeout">Network Timeout</string>
+    <string name="server_error">Server Error</string>
+    <string name="uri_error">Please check if URI is correct with protocol.</string>
+</resources>

@@ -1,0 +1,13 @@
+toast and string.xml reference: https://www.youtube.com/watch?v=mAJeK283j0I
+
+giving a reference for elements: https://stackoverflow.com/questions/4531396/get-value-of-a-edit-text-field
+
+Jsoup to textview: https://www.youtube.com/watch?v=x-VmYZGPnWc
+
+scrollable textview: https://stackoverflow.com/questions/1748977/making-textview-scrollable-on-android
+
+Images in imageview via picasso: https://www.youtube.com/watch?v=yl4FLNJ96vw
+picasso: https://github.com/square/picasso
+fix: https://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library
+
+add imageview dynamic : https://stackoverflow.com/questions/15356473/create-imageviews-dynamically-inside-a-loop
