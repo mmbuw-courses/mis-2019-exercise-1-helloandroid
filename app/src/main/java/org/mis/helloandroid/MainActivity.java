@@ -3,11 +3,17 @@ package org.mis.helloandroid;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -65,16 +71,32 @@ public class MainActivity extends AppCompatActivity {
                         public void onResponse(String response) {
 
                             Toast.makeText(getApplicationContext(), "Success.", Toast.LENGTH_SHORT).show();
-                            //TODO: Parse/display response
-                            
+
+                            //Print out response
+                            TextView httpResponse = findViewById(R.id.tv);
+                            //https://stackoverflow.com/a/3256305/6118088
+                            httpResponse.setMovementMethod(new ScrollingMovementMethod());
+                            httpResponse.setText(response);
+
+                            //Parse response
+                            WebView htmlOut = findViewById(R.id.wv);
+                            //https://stackoverflow.com/a/8987637/6118088
+                            htmlOut.loadData(response, "text/html; charset=utf-8", "UTF-8");
                         }
                     },
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError f) {
 
-                            //TODO: Distinguish between different errors
-                            Toast.makeText(getApplicationContext(), "Error: " + f.toString(), Toast.LENGTH_LONG).show();
+                            //Distinguish between different errors
+                            if(f.toString().startsWith("com.android.volley.NoConnectionError")){
+                                Toast.makeText(getApplicationContext(), "Error: No network connection!", Toast.LENGTH_SHORT).show();
+
+                            }
+                            else{
+                                Toast.makeText(getApplicationContext(), "Error: " + f.toString(), Toast.LENGTH_LONG).show();
+                            }
+
                         }
                     });
             requestQueue.add(requestString);
