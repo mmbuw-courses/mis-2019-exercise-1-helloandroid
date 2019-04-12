@@ -98,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onResponse(String response) {
 
-                                //ImageGetter is a Interface,
-                                //http://android-coding.blogspot.com/2013/09/htmlimagegetter-load-image-from-internet.html
+                                //There was a mix of method than later found the perfect combination for populating the images in textView
+                                //https://stackoverflow.com/questions/3758535/display-images-on-android-using-textview-and-html-imagegetter-asynchronously
                                 Spanned parsedText= Html.fromHtml(response,   new Html.ImageGetter() {
 
                                     @Override
