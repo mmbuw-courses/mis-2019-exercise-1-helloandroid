@@ -1,0 +1,100 @@
+DROID INFO REPORT
+
+
+DEVICE
+Model: [...]
+Manufacturer: [...]
+Baseband Version: [...]
+RIL Version: [...]
+Build Number: [...]
+Build Fingerprint: [...]
+Bootloader: [...]
+Java VM: ART 2.1.0
+OS Version: Nougat (7.0)
+SDK: 24
+
+DISPLAY
+Resolution: [...]
+Software Density: [...]
+Refresh Rate: [...]
+
+PROCESSOR
+CPU Architecture: AArch64 Processor rev 4 (aarch64)
+Board: [...]
+Chipset: [...]
+Cores: 8
+Clock Speed: 1638 MHz - 2392 MHz
+Instruction Sets: [...]
+CPU Features: fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU Governor: [...]
+Kernel Version: [...]
+Kernel Architecture: aarch64
+
+GRAPHICS
+Renderer: Mali-T880
+Vendor: ARM
+OpenGL Version: OpenGL ES 3.2
+
+RAM
+Total: 3767 MB
+Java Heap: 256 MB
+
+STORAGE
+Internal: [...]
+External: [...]
+
+PRIMARY CAMERA
+Resolution: [...]
+Flash: Yes
+Video Resolution: [...]
+Supported Resolutions: 
+    Image:
+    [...]
+
+    Video:
+    [...]
+
+SECONDARY CAMERA
+Resolution: [...]
+Video Resolution: [...]
+Supported Resolutions: 
+    Image:
+    [...]
+
+    Video:
+    [...]
+
+FEATURES
+Bluetooth: Yes
+Bluetooth LE: Yes
+GPS: Yes
+NFC: No
+USB Accessory: Yes
+WiFi: Yes
+WiFi Direct: Yes
+
+BATTERY
+Technology: [...]
+Health: [...]
+
+SENSORS
+[...] light sensor
+[...] proximity sensor
+[...] proximity sensor wakeup
+Magnetic Sensor
+Orientation Sensor
+Gyroscope Sensor
+Gyroscope Uncalibrated
+Accelerometer Sensor
+Game Rotation Vector
+Rotation Vector
+Linear Acceleration
+Gravity
+Step Detector
+Step Counter
+Flip
+Raise to Wake
+GeoMag Rotation Vector Sensor
+
+
+Created by Droid Info
