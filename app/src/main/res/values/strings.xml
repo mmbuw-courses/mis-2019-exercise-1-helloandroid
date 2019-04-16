@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ex1</string>
+    <string name="action_settings">Settings</string>
+    <string name="url">URL</string>
+    <string name="input_url_in_format_example_com">Input URL in format example.com</string>
+    <string name="connect">Connect</string>
+    <string name="contentDescription">www.example.com</string>
+    <string name="http">http://</string>
+</resources>
