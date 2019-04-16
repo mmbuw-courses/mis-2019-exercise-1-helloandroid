@@ -1,0 +1,167 @@
+DROID INFO REPORT
+
+
+DEVICE
+Model: TECNO KA7O (H8024)
+Manufacturer: TECNO MOBILE LIMITED
+Baseband Version: MOLY.WR8.W1449.MD.WG.MP.V177, 2018/05/09 12:15
+RIL Version: android reference-ril 1.0
+Build Number: KA7-H8024D-O-180712V119
+Build Fingerprint: TECNO/H8024/TECNO-KA7-O:8.1.0/O11019/DEF-180712V119:user/release-keys
+Bootloader: unknown
+Java VM: ART 2.1.0
+OS Version: O MR1 (8.1.0)
+SDK: 27
+
+DISPLAY
+Resolution: 720x1440 pixels
+Software Density: 320 dpi (xhdpi)
+Refresh Rate: 61.72 Hz
+
+PROCESSOR
+CPU Architecture: ARMv7 Processor rev 3 (v7l)
+Board: unknown
+Chipset: MT6580WP
+Cores: 4
+Clock Speed: 604 MHz - 1300 MHz
+Instruction Sets: armeabi-v7a, armeabi
+CPU Features: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm
+CPU Governor: interactive
+Kernel Version: 3.18.79+
+Kernel Architecture: armv7l
+
+GRAPHICS
+Renderer: Mali-400 MP
+Vendor: ARM
+OpenGL Version: OpenGL ES 2.0
+
+RAM
+Total: 1910 MB
+Java Heap: 192 MB
+
+STORAGE
+Internal: 10.9 GB
+EXTERNAL: Not Detected
+
+PRIMARY CAMERA
+Resolution: 13 MP
+Flash: Yes
+Video Resolution: 1920x1088
+Supported Resolutions: 
+    Image:
+    256x144
+    320x240
+    512x288
+    640x480
+    1024x768
+    1216x1216
+    1280x720
+    1280x960
+    1600x800
+    1600x1200
+    1920x1080
+    1920x1088
+    1920x1920
+    2048x1152
+    2048x1536
+    2304x1296
+    2496x2496
+    2560x1280
+    2560x1440
+    2560x1920
+    3072x1728
+    3136x3136
+    3264x1632
+    3264x2448
+    3328x1872
+    3584x2016
+    3840x2160
+    4032x2016
+    4096x2304
+    4160x2080
+    4096x3072
+    4160x3120
+
+    Video:
+    176x144
+    320x240
+    352x288
+    480x320
+    640x360
+    640x368
+    640x480 (VGA)
+    720x480
+    864x480
+    1280x640
+    1280x720 (HD)
+    1280x736
+    1280x960
+    1920x1080 (Full HD)
+    1920x1088
+
+SECONDARY CAMERA
+Resolution: 8 MP
+Video Resolution: 1920x1088
+Supported Resolutions: 
+    Image:
+    256x144
+    320x240
+    512x288
+    640x480
+    1024x768
+    1216x1216
+    1280x720
+    1280x960
+    1600x800
+    1600x1200
+    1920x1080
+    1920x1088
+    1920x1920
+    2048x1152
+    2048x1536
+    2304x1296
+    2560x1280
+    2560x1440
+    2496x2496
+    2560x1920
+    3072x1728
+    3264x1632
+    3264x2448
+
+    Video:
+    176x144
+    320x240
+    352x288
+    480x320
+    640x360
+    640x368
+    640x480 (VGA)
+    720x480
+    864x480
+    1280x640
+    1280x720 (HD)
+    1280x736
+    1280x960
+    1920x1080 (Full HD)
+    1920x1088
+
+FEATURES
+Bluetooth: Yes
+Bluetooth LE: Yes
+GPS: Yes
+NFC: No
+USB Accessory: Yes
+WiFi: Yes
+WiFi Direct: Yes
+
+BATTERY
+Technology: Li-ion
+Health: Good
+
+SENSORS
+MC3410_I2C_ACCELEROMETER
+Ltr579_LIGHT
+Ltr579_PROXIMITY
+
+
+Created by Droid Info
